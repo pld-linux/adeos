@@ -43,10 +43,10 @@ install %{name}	$RPM_BUILD_ROOT%{_bindir}
 cat > $RPM_BUILD_ROOT/etc/cron.weekly/%{name}.sh <<EOF
 cd %{_wwwdir}
 %{_bindir}/%{name} -h
-chmod a+r result.html
+chmod a+r results.html
 EOF
 
-touch $RPM_BUILD_ROOT%{_wwwdir}/result.html
+touch $RPM_BUILD_ROOT%{_wwwdir}/results.html
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -56,5 +56,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGELOG README
 %attr(755,root,root) %{_bindir}/*
 %dir %{_wwwdir}
-%ghost %{_wwwdir}/result.html
+%ghost %{_wwwdir}/results.html
 %attr(755,root,root) %config(noreplace) /etc/cron.weekly/%{name}.sh
