@@ -10,7 +10,7 @@ Source0:	http://linux.wku.edu/~lamonml/software/adeos/%{name}-%{version}.tar.bz2
 URL:		http://linux.wku.edu/~lamonml/software/adeos/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_wwwdir		/home/services/httpd/html/%{name}
+%define		_wwwdir		/srv/httpd/html/%{name}
 
 %description
 Adeos (named after the obscure Roman goddess of modesty) is an
