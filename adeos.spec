@@ -35,10 +35,10 @@ Requires:	crondaemon
 Requires:	webserver
 
 %description www
-Scripts and cron jobs to publish data on www.
+Scripts and cron jobs to publish data on WWW.
 
 %description www -l pl
-Skrypty crona do publikacji na stronie www.
+Skrypty crona do publikacji na stronie WWW.
 
 %prep
 %setup -q
