@@ -2,7 +2,7 @@ Summary:	Adeos - automated filesystem security scanner
 Summary(pl):	Adeos - Zautomatyzowany skaner bezpieczeñstwa systemu plików
 Name:		adeos
 Version:	1.0
-Release:	2
+Release:	3
 Group:		Applications/System
 License:	GPL v2
 Source0:	http://linux.wku.edu/~lamonml/software/adeos/%{name}-%{version}.tar.bz2
@@ -70,6 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 
 %files www
+%defattr(644,root,root,755)
 %dir %{_wwwdir}
 %ghost %{_wwwdir}/results.html
 %attr(755,root,root) %config(noreplace) /etc/cron.weekly/%{name}.sh
