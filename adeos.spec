@@ -6,8 +6,12 @@ Release:	1
 Group:		Applications/System
 License:	GPL v2
 Source0:	http://linux.wku.edu/~lamonml/software/adeos/%{name}-%{version}.tar.bz2
+Requires:	crondaemon
+Requires:	webserver
 URL:		http://linux.wku.edu/~lamonml/software/adeos/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_wwwdir		/home/httpd/html/%{name}
 
 %description
 Adeos (named after the obscure Roman goddess of modesty) is an
@@ -32,9 +36,17 @@ czy pliki zapisywalne dla wszystkich.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT{%{_bindir},/etc/cron.weekly,%{_wwwdir}}
 
 install %{name}	$RPM_BUILD_ROOT%{_bindir}
+
+cat > $RPM_BUILD_ROOT/etc/cron.weekly/%{name}.sh <<EOF
+cd %{_wwwdir}
+%{_bindir}/%{name} -h
+chmod a+r result.html
+EOF
+
+touch $RPM_BUILD_ROOT%{_wwwdir}/result.html
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -43,3 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGELOG README
 %attr(755,root,root) %{_bindir}/*
+%dir %{_wwwdir}
+%ghost %{_wwwdir}/result.html
+%attr(755,root,root) %config(noreplace) /etc/cron.weekly/%{name}.sh
