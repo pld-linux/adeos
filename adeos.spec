@@ -8,6 +8,7 @@ License:	GPL v2
 Source0:	http://linux.wku.edu/~lamonml/software/adeos/%{name}-%{version}.tar.bz2
 # Source0-md5:	059b47e4cd45a40c060bd41dd33739a1
 URL:		http://linux.wku.edu/~lamonml/software/adeos/
+BuildRequires:	fhs-compliance
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_wwwdir		/srv/httpd/html/%{name}
