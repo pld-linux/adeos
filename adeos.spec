@@ -1,3 +1,4 @@
+# TODO: webapps or so
 Summary:	Adeos - automated filesystem security scanner
 Summary(pl):	Adeos - Zautomatyzowany skaner bezpieczeñstwa systemu plików
 Name:		adeos
