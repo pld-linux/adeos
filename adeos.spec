@@ -1,6 +1,6 @@
 # TODO: webapps or so
 Summary:	Adeos - automated filesystem security scanner
-Summary(pl):	Adeos - Zautomatyzowany skaner bezpieczeñstwa systemu plików
+Summary(pl.UTF-8):   Adeos - Zautomatyzowany skaner bezpieczeÅ„stwa systemu plikÃ³w
 Name:		adeos
 Version:	1.0
 Release:	3
@@ -20,16 +20,16 @@ automated filesystem security scanner. It recursively walks all
 mounted filesystems on the local system and attempts to identify
 common security concerns such as SUID and world-writeable files.
 
-%description -l pl
-Adeos (nazwany na cze¶æ nieznanego rzymskiego boga skromno¶ci) jest
-zautomatyzowanym skanerem bezpieczeñstwa systemu plików. Program
-rekursywnie przemieszcza siê po lokalnym systemie plików i stara siê
-zidentyfikowaæ powszechne b³êdy w zabezpieczeniach, takie jak SUIDy
+%description -l pl.UTF-8
+Adeos (nazwany na czeÅ›Ä‡ nieznanego rzymskiego boga skromnoÅ›ci) jest
+zautomatyzowanym skanerem bezpieczeÅ„stwa systemu plikÃ³w. Program
+rekursywnie przemieszcza siÄ™ po lokalnym systemie plikÃ³w i stara siÄ™
+zidentyfikowaÄ‡ powszechne bÅ‚Ä™dy w zabezpieczeniach, takie jak SUIDy
 czy pliki zapisywalne dla wszystkich.
 
 %package www
 Summary:	Adeos - automated filesystem security scanner
-Summary(pl):	Adeos - Zautomatyzowany skaner bezpieczeñstwa systemu plików
+Summary(pl.UTF-8):   Adeos - Zautomatyzowany skaner bezpieczeÅ„stwa systemu plikÃ³w
 Group:		Applications/System
 Requires:	adeos
 Requires:	crondaemon
@@ -38,7 +38,7 @@ Requires:	webserver
 %description www
 Scripts and cron jobs to publish data on WWW.
 
-%description www -l pl
+%description www -l pl.UTF-8
 Skrypty crona do publikacji na stronie WWW.
 
 %prep
