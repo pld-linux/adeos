@@ -1,6 +1,6 @@
 # TODO: webapps or so
 Summary:	Adeos - automated filesystem security scanner
-Summary(pl.UTF-8):   Adeos - Zautomatyzowany skaner bezpieczeństwa systemu plików
+Summary(pl.UTF-8):	Adeos - Zautomatyzowany skaner bezpieczeństwa systemu plików
 Name:		adeos
 Version:	1.0
 Release:	3
@@ -29,7 +29,7 @@ czy pliki zapisywalne dla wszystkich.
 
 %package www
 Summary:	Adeos - automated filesystem security scanner
-Summary(pl.UTF-8):   Adeos - Zautomatyzowany skaner bezpieczeństwa systemu plików
+Summary(pl.UTF-8):	Adeos - Zautomatyzowany skaner bezpieczeństwa systemu plików
 Group:		Applications/System
 Requires:	adeos
 Requires:	crondaemon
